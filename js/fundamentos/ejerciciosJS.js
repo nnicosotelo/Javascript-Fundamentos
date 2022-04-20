@@ -34,12 +34,28 @@
 // }
 
 // ejercicio 9
-// let frase = parseInt(prompt('ingrese una frase'))
+// let frase = prompt('ingrese una frase')
+// console.log(`las vocales que incluye la frase son ${frase}`)
+// if (frase.includes('a')) {
+//     console.log('a');
+// }
+// if (frase.includes('e')) {
+//         console.log('e');
+// }
+// if (frase.includes('i')) {
+//         console.log('i');
+// }
+// if (frase.includes('o')) {
+//         console.log('o');
+// }
+// if (frase.includes('u')) {
+//         console.log('u');
+// }
 
 // ejercicio 10
 // let numero = parseInt(prompt('ingrese un numero'))
 // if(numero % 2 === 0){
-//     console.log('el numero es divisble por 2')
+//     console.log('el numero es divisible por 2')
 // }else if(numero % 3 === 0){
 //     console.log('el numero es divisible por 3')
 // }else if(numero % 5 ===0){
@@ -48,3 +64,4 @@
 //     console.log('el numero es divisible por 7')
 // }
 
+ 
