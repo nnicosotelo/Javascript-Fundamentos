@@ -1,10 +1,16 @@
 // Tarea 1
 
 // Obtener un numero aleatorio entre 1 y 100
-console.log(Math.ceil(Math.random () + 27));
+
+let numeroAleatorio = (Math.ceil(Math.random () * 100));
 
 // Obtener la raiz cuadrada
-console.log(Math.sqrt(28));
+let raiz = (Math.sqrt(numeroAleatorio));
+let numeroDecimal = parseFloat(raiz.toFixed(2));
+
+console.log(`La raiz de ${numeroAleatorio} es de ${numeroDecimal}`)
+
+
 
 // Elevar a la potencia
 let base = 4
