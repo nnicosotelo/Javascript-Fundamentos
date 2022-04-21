@@ -46,17 +46,28 @@
 
 // tarea
 
-let cantidadDealumnos = parseInt(prompt('ingrese la cantidad de alumnos'))
+let cantidadDeAlumnos = parseInt(prompt('ingrese la cantidad de alumnos'));
 
 let lista ="";
 let nombre ="";
-if(!isNaN(cantidadDealumnos)){
-    for (let i = 0; i < cantidadDealumnos; i++) {
-        nombre=prompt('ingrese el nombre del nombre del alumno')
-        lista+=`${nombre} \n`
-         }
-         console.log(lista);
-}else{
-    console.log('la cantidad ingresada no es valida')
 
+if (!isNaN(cantidadDeAlumnos)) {
+    for (let i = 0; i < cantidadDeAlumnos; i++) {
+        nombre = prompt("ingrese el nombre del alumno");
+
+        // validar si no hay nada
+    if(nombre && parseInt(nombre)){
+        console.warn('el dato no es valido')
+    }else{
+
+        lista+=`${nombre} \n`;
+    }
+
+
+
+    }
+    console.log(lista);
+}else{
+
+    console.log("la cantidad ingresada no es valida");
 }
