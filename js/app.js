@@ -1,8 +1,12 @@
-let lista =[23, 45, 64, 24, 52, 235, 5525, 27];
-let numero = parseInt(prompt('ingrese un numero'));
+let rollingCoders=[];
 
-if(lista.includes(numero)) {
-    console.log(`El numero ${numero} se encuntra en la lista`)
-}else{
-    console.log(`el numero ingresado no esta en la lista`);
+
+while (rollingCoders.length < 5) {
+    
+    rollingCoders.push(prompt('Ingrese el nombre del alumno'));
+}
+
+for (let index = 0; index < array.length; index++) {
+    console.log(`Hola ${rollingCoders[index]} bienvenido al mundo del desarrollo web`);
+    
 }
