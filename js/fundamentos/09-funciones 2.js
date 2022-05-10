@@ -120,5 +120,13 @@ console.log(obtenerNombreconLetra('m'));
 let lenguajes = ['Javascript', 'c++', 'c#', 'java', '.net'];
 
 function ordenarLenguajes(){
-    
+ 
+    let lenguajesOrdenados = [];
+    console.log(lenguajesOrdenados);
+
+    lenguajesOrdenados = lenguajes.slice(0);
+
+    lenguajesOrdenados.sort().map(function(lenguaje, index){
+        console.log(`${index + 1} - ${lenguaje,toUpperCase()}`)
+    });
 }
