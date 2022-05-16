@@ -88,8 +88,8 @@ let data = [
 
 // mostrar una lista con los nombres en orden alfabetico
 
-const listaUsuarios = function () {
-  let usuariosOrdenados = data.map(function (alumno) {
+const listaUsuarios = function (array) {
+  let usuariosOrdenados = array.map(function (alumno) {
     return `${alumno.last_name} ${alumno.first_name}`;
   });
 
@@ -130,6 +130,7 @@ function agregarUsuario() {
 // la funcion permite saber cual es el usuario
 // usar el id para identificar al usuario
 // pedir el nombre
+// guardar esa info en la data
 
 const actualizarNombre = function (id) {
   let index = data.findIndex(function (user) {
@@ -148,3 +149,44 @@ const actualizarNombre = function (id) {
 
   // console.log(index);
 };
+
+// borrar un elemento en particular
+const borrarUsuario = function (id) {
+  let indice = validarId(id);
+
+  if (indice < 0) {
+    return "El id ingresado no existe";
+  }
+
+  let validar = confirm("Esta seguro que desea eliminar el usuario");
+
+  if (validar) {
+    data.splice(indice, 1);
+    alert(`El usuario con el id ${id} fue eliminado`);
+  }
+};
+
+function validarId(id) {
+  let index = data.findIndex(function (user) {
+    return user.id === id;
+  });
+
+  return index;
+}
+
+// realizar una busqueda de usuarios cuyo apellido coincida con un termino a buscar
+
+const filtrarUsuariosporApellidos = function (termino) {
+  let resultado = data.filter(function (user) {
+    return user.last_name.toLowerCase().includes(termino.toLowerCase());
+  });
+
+  if (resultado.length === 0) {
+    console.log("No se encontraron resultados");
+  }
+  // console.log(resultado);
+  listaUsuarios(resultado);
+};
+
+// CRUD
+// Create, Read, Update, Delete
