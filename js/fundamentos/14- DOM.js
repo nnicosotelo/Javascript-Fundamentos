@@ -102,4 +102,4 @@ document
   .getElementById("text_nombre")
   .addEventListener("change", obtenerNombre);
 
-document.getElementById("toogle").addEventListener("click", modoOscuro);
+document.getElementById("toggle").addEventListener("click", modoOscuro);
